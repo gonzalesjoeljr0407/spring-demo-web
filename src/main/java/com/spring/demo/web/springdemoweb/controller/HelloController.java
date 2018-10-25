@@ -13,4 +13,9 @@ public class HelloController {
         model.addAttribute("value", value);
         return "login";
     }
+    
+    @GetMapping("/exception")
+    public String generateException() throws Exception {
+        throw new NullPointerException();
+    }
 }
